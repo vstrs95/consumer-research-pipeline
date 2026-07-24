@@ -4,7 +4,7 @@ Crawls public mentions of five AI assistant products from Hacker News, lands the
 in SQLite, labels each record with sentiment and category, and emits a summary an
 analyst can read in about thirty seconds.
 
-**Time spent: ~4 hours.**
+
 
 ---
 
