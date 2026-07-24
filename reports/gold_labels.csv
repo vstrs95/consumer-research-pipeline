@@ -1,0 +1,26 @@
+id,topic,text,predicted_sentiment,predicted_category,true_sentiment,true_category
+44489068,Gemini,Learn how to disable Gemini AI on Android,neutral,technical_discussion,neutral,technical_discussion
+34598406,Perplexity,Launch HN: Needl (YC S22) – Simple search across all your apps,neutral,product_launch,neutral,product_launch
+27872116,Copilot,GitHub Copilot: First Impressions,positive,technical_discussion,positive,technical_discussion
+45814461,Perplexity,Amazon Demands Perplexity Stop AI Agent from Making Purchases,negative,other,negative,other
+38759877,ChatGPT,Ask HN: How do I train a custom LLM/ChatGPT on my own documents in Dec 2023?,neutral,other,neutral,technical_discussion
+38166431,ChatGPT,GPTs: Custom versions of ChatGPT,neutral,other,neutral,other
+37356541,Gemini,(Allegedly) Google's upcoming Gemini AI model smashes OpenAI's GPT-4,neutral,technical_discussion,neutral,technical_discussion
+35062157,ChatGPT,ChatGPT Explained: A normie's guide to how it works,neutral,other,neutral,other
+45773207,Perplexity,Perplexity's new AI tool aims to simplify patent research,neutral,other,positive,product_launch
+34426421,ChatGPT,OpenAI used Kenyan workers on less than $2 per hour to make ChatGPT less toxic,neutral,other,negative,criticism
+44987819,Gemini,Apple Explores Using Google Gemini AI to Power Revamped Siri,neutral,technical_discussion,neutral,technical_discussion
+47903126,ChatGPT,Amateur armed with ChatGPT solves an Erdős problem,negative,criticism,negative,criticism
+42904096,Gemini,Google says hackers abuse Gemini AI to empower their attacks,negative,other,negative,other
+33885153,ChatGPT,I Taught ChatGPT to Invent a Language,neutral,other,neutral,other
+43852031,Gemini,Gemini AI video generator powered by Veo 2,neutral,other,neutral,technical_discussion
+40812573,Perplexity,Why perplexity.ai is so popular?,positive,other,positive,other
+28402544,Copilot,GitHub Copilot Generated Insecure Code in 40% of Circumstances During Experiment,negative,technical_discussion,negative,technical_discussion
+28279365,Copilot,An empirical cybersecurity evaluation of GitHub Copilot's code contributions,neutral,technical_discussion,neutral,technical_discussion
+33945628,ChatGPT,Ask HN: Should HN ban ChatGPT/generated responses?,negative,criticism,negative,other
+37295192,Copilot,Continue with LocalAI: An alternative to GitHub's Copilot that runs locally,neutral,technical_discussion,negative,product_launch
+37761273,ChatGPT,Extracting Hacker News book recommendations with the ChatGPT API,neutral,technical_discussion,neutral,technical_discussion
+42164141,Claude,Claude AI built me a React app to compare maps side by side,neutral,technical_discussion,positive,technical_discussion
+44031432,Copilot,GitHub Copilot Coding Agent,neutral,technical_discussion,neutral,technical_discussion
+27889967,Copilot,"Is GitHub Copilot a blessing, or a curse?",negative,technical_discussion,negative,criticism
+43191186,Perplexity,Perplexity AI launching $50M venture fund to back early-stage startups,neutral,product_launch,positive,business_news

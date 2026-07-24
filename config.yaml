@@ -1,0 +1,64 @@
+# Consumer Research Pipeline — configuration
+# Everything that could reasonably change lives here, not in code.
+
+source:
+  name: hackernews_algolia
+  base_url: https://hn.algolia.com/api/v1/search
+  # Identifies the crawler to the operator, per polite-crawling convention.
+  user_agent: "consumer-research-pipeline/0.1 (take-home exercise; contact: candidate@example.com)"
+  # Seconds to sleep between requests. HN Algolia documents ~10k req/hour;
+  # 1.0s keeps us two orders of magnitude below that.
+  rate_limit_seconds: 1.0
+  max_retries: 3
+  # Backoff is backoff_base ** attempt seconds: 1s, 2s, 4s.
+  backoff_base: 2.0
+  hits_per_page: 50
+  # Per-topic cap. 5 topics x 100 = 500 max, the spec's ceiling.
+  max_items_per_topic: 100
+  # Only search stories (not comments) — keeps records comparable.
+  tags: story
+
+topics:
+  # `name` is the display label; `query` is what we send to the API.
+  # They differ where a bare brand name is ambiguous.
+  - name: ChatGPT
+    query: ChatGPT
+  - name: Claude
+    query: Claude AI          # bare "Claude" collides with Claude Shannon / Monet
+  - name: Gemini
+    query: Gemini AI          # bare "Gemini" collides with the Gemini protocol & crypto exchange
+  - name: Copilot
+    query: GitHub Copilot     # disambiguates from Microsoft 365 Copilot & autopilot usages
+  - name: Perplexity
+    query: Perplexity AI      # bare "perplexity" is an NLP evaluation metric
+
+storage:
+  raw_dir: data/raw
+  db_path: data/mentions.db
+
+classification:
+  # VADER compound-score cutoffs. +/-0.05 is the threshold documented by
+  # VADER's authors (Hutto & Gilbert, 2014), not a value we tuned.
+  sentiment_thresholds:
+    positive: 0.05
+    negative: -0.05
+  # Ordered taxonomy: first matching rule wins, so more specific
+  # categories are listed before broader ones. `other` is the fallback.
+  categories:
+    - product_launch
+    - business_news
+    - criticism
+    - technical_discussion
+    - other
+
+reporting:
+  summary_path: reports/summary.md
+  evaluation_path: reports/evaluation.md
+  gold_labels_path: reports/gold_labels.csv
+  eval_sample_size: 25
+  # Fixed seed so the hand-labelled sample is reproducible across runs.
+  eval_seed: 42
+  top_items_per_topic: 3
+
+logging:
+  level: INFO
