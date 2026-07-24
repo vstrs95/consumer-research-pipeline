@@ -1,7 +1,7 @@
 # Consumer Research Pipeline
 
-Crawls public mentions of five AI assistant products from Hacker News -> lands them
-in SQLite -> labels each record with sentiment and category -> emits a summary an
+Crawls public mentions of five AI assistant products from Hacker News, lands them
+in SQLite, labels each record with sentiment and category then emits a summary an
 analyst can read in about thirty seconds.
 
 
